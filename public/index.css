@@ -24,6 +24,10 @@ body {
   font-family: "JetBrains Mono", monospace;
 }
 
+a {
+  color: inherit;
+}
+
 .background {
   position: fixed;
   top: 0;
@@ -37,6 +41,10 @@ body {
   background-position: center;
   filter: blur(1rem);
   scale: 1.1;
+}
+
+.not-found .background {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAA0UlEQVR42mPY7Gm/2cNuT7jnMjvrCdaGpboaZbraOeqqDC262pMsjCZZGZXrapbqawNF89RVp+nqM7gpyLoqyAeoKAOFNpibLNAzWqRrNF1HjyFSWSZCSbZMR/uglct+Y7t+Za2puvpt+toMEUpyEwxV99hZ7jewK5LXsuAR6VfUmqKhzmAmztmgJ7PP1mKyqnGGqHSWiISbsHSLugZDi5rWJlOTw9bui3WMexS1M0WlrfjEazRNGMrlFQ9YuWw3da3XNimQ0/ITkfARU/AVVwAAK0A2NXGw+3sAAAAASUVORK5CYII=");
 }
 
 .container {
