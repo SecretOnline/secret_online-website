@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/JetBrainsMono-Regular-ascii.woff2) format("woff2");
+  unicode-range: U+000-07F;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: calc(1rem + 0.25vw);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAA00lEQVR42mOo3zK9btu0pn2Lizd0Jy1uDOgrCm/NCKlKYcjsy0hY0JC6tDawtziotyC0JTOkMqWyupJBLcVLszRSvzk6pDV7Wm1DX0V1TzUQVDI4FvuaFLmEtWXMnbZyZdGKTt+CaXGZmb2ZDEFlts2LvGYval9YvDnfscmJOaHbr6CzIITBNJKpYab+7EWtrYEz0yWSEmRdbLUTilLaGepyfKdNKZszdUVjysxuv6I6eQ09kRDPgCkMeb6hs3vXtdRsTkhe6OPS4qPoa65Rbq5RBgD6slL8dOZ0jQAAAABJRU5ErkJggg==");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(1rem);
+  scale: 1.1;
+}
+
+.container {
+  margin: calc(max(1rem, 5vw));
+  padding: calc(max(1rem, 5vw));
+  border: 3px solid #ffffff;
+  color: #ffffff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  border-radius: 1px;
+}
+
+.no-margin {
+  margin: 0;
+}
