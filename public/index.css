@@ -43,7 +43,7 @@ hr {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAA00lEQVR42mOo3zK9btu0pn2Lizd0Jy1uDOgrCm/NCKlKYcjsy0hY0JC6tDawtziotyC0JTOkMqWyupJBLcVLszRSvzk6pDV7Wm1DX0V1TzUQVDI4FvuaFLmEtWXMnbZyZdGKTt+CaXGZmb2ZDEFlts2LvGYval9YvDnfscmJOaHbr6CzIITBNJKpYab+7EWtrYEz0yWSEmRdbLUTilLaGepyfKdNKZszdUVjysxuv6I6eQ09kRDPgCkMeb6hs3vXtdRsTkhe6OPS4qPoa65Rbq5RBgD6slL8dOZ0jQAAAABJRU5ErkJggg=="),
+  background: url(" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVBhXBcHbasIwGADg5I+x0aZWWsV6YIwxhF3MbYJv4iP4EL6leONFL1Rwk7G1tGubNOlx34e3+x3CCCiTeSzyIkskLXSja7J4ctMWqyKNQlFqTYqyVbUHAyJdO1Iq1mLQkFdlDUvqAKtQC04fjCaZQe+dv3A9r2/KCLKMSzBBbB47K3dMvg3/cj8epJKdcZAQNgo9t9sji8hv0+uN9UNfU9N+gA9rbVdvOPcajrxnc4RD+ac+Uwbil5JqGUfGD6Inzc8w7VqT7Cv4ByKyYKPUX5bYAAAAAElFTkSuQmCC"),
     #000000;
   background-size: cover;
   background-repeat: no-repeat;
@@ -58,7 +58,7 @@ hr {
   }
 }
 .not-found .background {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAA0UlEQVR42mPY7Gm/2cNuT7jnMjvrCdaGpboaZbraOeqqDC262pMsjCZZGZXrapbqawNF89RVp+nqM7gpyLoqyAeoKAOFNpibLNAzWqRrNF1HjyFSWSZCSbZMR/uglct+Y7t+Za2puvpt+toMEUpyEwxV99hZ7jewK5LXsuAR6VfUmqKhzmAmztmgJ7PP1mKyqnGGqHSWiISbsHSLugZDi5rWJlOTw9bui3WMexS1M0WlrfjEazRNGMrlFQ9YuWw3da3XNimQ0/ITkfARU/AVVwAAK0A2NXGw+3sAAAAASUVORK5CYII=");
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVBhXDczBMsRAEAbgnu5kZiXZsOvghiPFwXt5YVVuLlQpCpHJdHr+NN8DfOHx4d7JmVmrlYpsVdwdLnen/eK+wn7UsCE4EfzYRtnF9rvaZLZnuWxOhiCjNPg/Dq0k2i7adN2dJYoo4IoSKndMt+PuquuDhtdpfv6cK2gP549lAozI56Km6yHR05QzEt8M572MgaILHYc0sue1viu4rMShy+pfm78o3kCxSb+L/gFrlmTqHkDOkwAAAABJRU5ErkJggg==");
 }
 
 .container {
@@ -75,7 +75,6 @@ hr {
   text-align: center;
   border-radius: 1px;
 }
-
 .content {
   flex-grow: 1;
   margin: 0 auto;
@@ -89,4 +88,36 @@ hr {
 
 .no-margin {
   margin: 0;
+}
+
+.small-box {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid #ffffff;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  border-radius: 1px;
+}
+
+.button {
+  padding: 0.5em 0.6em;
+  background-color: #ffffff22;
+  border: none;
+  border-radius: 1px;
+
+  &:hover {
+    background-color: #ffffff44;
+  }
+  &:active {
+    background-color: #ffffff55;
+  }
+  &:disabled,
+  &[aria-disabled="true"] {
+    background-color: transparent;
+  }
 }
