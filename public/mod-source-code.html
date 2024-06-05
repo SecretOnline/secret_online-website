@@ -17,6 +17,14 @@
       crossorigin
     />
     <link rel="stylesheet" href="/index.css" />
+    <script
+      async
+      defer
+      data-do-not-track="true"
+      data-domains="secretonline.co"
+      data-website-id="9147fea1-1c1f-4f4c-973a-ac5ab1704251"
+      src="https://stats.secretonline.co/script.js"
+    ></script>
   </head>
   <body>
     <div class="background"></div>
@@ -45,9 +53,18 @@
               download=""
               rel="external"
               aria-disabled="true"
+              data-umami-event="download-source"
+              data-umami-event-mod=""
+              data-umami-event-version=""
               >Download from Modrinth</a
             >
-            <a id="release" rel="external" aria-disabled="true"
+            <a
+              id="release"
+              rel="external"
+              aria-disabled="true"
+              data-umami-event="open-release-page"
+              data-umami-event-mod=""
+              data-umami-event-version=""
               >(Release page)</a
             >
           </div>
@@ -126,6 +143,12 @@
             versionSelect.disabled = false;
 
             updateDownloadLink(projectId, versionSelect.value);
+            if (window.umami) {
+              window.umami.track("select-mod-version", {
+                mod: projectId,
+                versionId: versionSelect.value,
+              });
+            }
           }
 
           async function updateDownloadLink(projectId, versionId) {
@@ -152,6 +175,15 @@
 
             downloadLink.ariaDisabled = "false";
             releaseLink.ariaDisabled = "false";
+
+            downloadLink.dataset.umamiEventMod =
+              modSelect.options[modSelect.selectedIndex]?.text;
+            releaseLink.dataset.umamiEventMod =
+              modSelect.options[modSelect.selectedIndex]?.text;
+            downloadLink.dataset.umamiEventVersion =
+              versionSelect.options[versionSelect.selectedIndex]?.text;
+            releaseLink.dataset.umamiEventVersion =
+              versionSelect.options[versionSelect.selectedIndex]?.text;
           }
 
           modSelect.addEventListener("change", () =>
