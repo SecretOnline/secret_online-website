@@ -137,7 +137,9 @@
             versions.forEach((version) => {
               const option = document.createElement("option");
               option.value = version.id;
-              option.textContent = version.version_number;
+              option.textContent = `${version.version_number} (${
+                version.game_versions?.at(-1) ?? "?"
+              })`;
               versionSelect.appendChild(option);
             });
             versionSelect.disabled = false;
@@ -200,8 +202,8 @@
         <p>
           I created the git projects for my mods on my personal GitHub account,
           which I try to keep separate from my online stuff. That's a bit of a
-          problem when it comes to making the source code to be available. If
-          the GitHub repository is private, then how do I share the code?
+          problem when it comes to making the source code available. If the
+          GitHub repository is private, then how do I share the code?
         </p>
         <p>
           The answer I've come up with is to upload source artifacts on the
