@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client Side Painting Variants - secret_online</title>
+    <meta
+      name="description"
+      content="Add custom painting variants without overwriting existing paintings by using resource packs."
+    />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <link
+      rel="preload"
+      href="/JetBrainsMono-Regular-ascii.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin
+    />
+    <link rel="stylesheet" href="/index.css" />
+    <script
+      async
+      defer
+      data-do-not-track="true"
+      data-domains="secretonline.co"
+      data-website-id="9147fea1-1c1f-4f4c-973a-ac5ab1704251"
+      src="https://stats.secretonline.co/script.js"
+    ></script>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <h1 class="no-margin lower"><a href="/">secret_online</a></h1>
+      <img
+        src="/static/client-side-painting-variants/icon.png"
+        alt="Logo featuring many painting items coming out of a red burst shape."
+        class="mod-icon"
+      />
+      <h2 class="no-margin">Client Side Painting Variants</h2>
+      <div class="content">
+        <p>
+          Client Side Painting Variants is a mod that allows the player to add
+          new paintings to the game without any changes to the world or server.
+        </p>
+        <div class="small-box">
+          <p>
+            <a
+              href="https://modrinth.com/mod/client-side-painting-variants"
+              class="button"
+              rel="external"
+              data-umami-event="open-mod-page"
+              data-umami-event-mod="client-side-painting-variants"
+              data-umami-event-site="modrinth"
+              >Download from Modrinth</a
+            >
+          </p>
+          <div>
+            Get the source code on
+            <a
+              href="https://github.com/SecretOnline/client-side-painting-variants"
+              rel="external"
+              data-umami-event="open-mod-page"
+              data-umami-event-mod="client-side-painting-variants"
+              data-umami-event-site="github"
+              >GitHub</a
+            >.
+          </div>
+          <div>
+            Do not download from other websites. At best you'll get an
+            out-of-date version. At worst you'll download malware. I only upload
+            this mod to Modrinth.
+          </div>
+        </div>
+        <h3>Why make this mod?</h3>
+        <p>
+          Resource packs change the look and feel of the game. Some packs will
+          retexture paintings as part of this stylistic overhaul. I personally
+          don't like this, as I have grown fond of the game's paintings.
+        </p>
+        <p>
+          Minecraft 1.21 added new functionality to data packs that allow a
+          world or server to add new paintings to the game without removing any
+          of the old ones. However, this requires action by server owners and it
+          affects all players on that server. Players without the right resource
+          packs (even server-defined resource packs can be removed) will just
+          see the black and magenta missing texture.
+        </p>
+        <p>
+          So I set out to find a way to add new paintings, but at the individual
+          client level without affecting other players.
+        </p>
+        <h3>What does it look like?</h3>
+        <p>
+          That really depends on the resource packs that are being used. It's
+          like you've got new paintings in the game, I guess.
+        </p>
+        <h3>How does it work?</h3>
+        <p>
+          Every entity in the game has a UUID (effectively a random number that
+          stays the same as long as the entity exists) that identifies it. Based
+          on this UUID, this mod will either leave the painting's texture alone
+          or replace it with a different texture.
+        </p>
+        <p>
+          The specifics of which texture to replace it with is entirely based on
+          the resource packs that have been loaded. The chances for each
+          painting variant have been weighted so each variant has an equal
+          change of being picked when the painting is placed.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
