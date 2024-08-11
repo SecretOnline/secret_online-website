@@ -22,6 +22,7 @@ body {
   min-height: 100vh;
   min-height: 100svh;
   font-family: "JetBrains Mono", monospace;
+  line-height: 1.2;
 }
 
 a {
@@ -38,6 +39,18 @@ hr {
 
 figure > img {
   width: 100%;
+}
+
+code {
+  display: inline-block;
+  padding: 0em 0.3em;
+  background-color: #ffffff22;
+  border: none;
+  border-radius: 4px;
+}
+
+ul {
+  padding-inline-start: 20px;
 }
 
 .background {
@@ -78,6 +91,8 @@ figure > img {
   gap: 1rem;
   text-align: center;
   border-radius: 1px;
+  backdrop-filter: brightness(40%) saturate(80%) blur(10px);
+  border-radius: 16px;
 }
 .content {
   flex-grow: 1;
@@ -105,7 +120,7 @@ figure > img {
   align-items: center;
   gap: 1rem;
   text-align: center;
-  border-radius: 1px;
+  border-radius: 8px;
 }
 
 .button {
@@ -113,7 +128,7 @@ figure > img {
   padding: 0.5em 0.6em;
   background-color: #ffffff22;
   border: none;
-  border-radius: 1px;
+  border-radius: 8px;
 
   &:hover {
     background-color: #ffffff44;
