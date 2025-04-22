@@ -3,8 +3,16 @@
   font-style: normal;
   font-display: swap;
   font-weight: 400;
-  src: url(/JetBrainsMono-Regular-ascii.woff2) format("woff2");
+  src: url(/static/fonts/JetBrainsMono-Regular-ascii.woff2) format("woff2");
   unicode-range: U+000-07F;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(/static/fonts/SourceSerif4-Regular.woff2) format("woff2");
 }
 
 * {
@@ -21,8 +29,19 @@ body {
   flex-direction: column;
   min-height: 100vh;
   min-height: 100svh;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "Source Serif 4", Charter, Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
   line-height: 1.2;
+}
+
+h1 {
+  font-family: "JetBrains Mono", monospace;
+}
+
+h2,
+h3,
+h4 {
+  font-style: italic;
 }
 
 a {
@@ -39,6 +58,10 @@ hr {
 
 figure > img {
   width: 100%;
+}
+
+figcaption {
+  font-style: italic;
 }
 
 code {
@@ -60,7 +83,7 @@ ul {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: url(" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVBhXBcHbasIwGADg5I+x0aZWWsV6YIwxhF3MbYJv4iP4EL6leONFL1Rwk7G1tGubNOlx34e3+x3CCCiTeSzyIkskLXSja7J4ctMWqyKNQlFqTYqyVbUHAyJdO1Iq1mLQkFdlDUvqAKtQC04fjCaZQe+dv3A9r2/KCLKMSzBBbB47K3dMvg3/cj8epJKdcZAQNgo9t9sji8hv0+uN9UNfU9N+gA9rbVdvOPcajrxnc4RD+ac+Uwbil5JqGUfGD6Inzc8w7VqT7Cv4ByKyYKPUX5bYAAAAAElFTkSuQmCC"),
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVBhXBcHbasIwGADg5I+x0aZWWsV6YIwxhF3MbYJv4iP4EL6leONFL1Rwk7G1tGubNOlx34e3+x3CCCiTeSzyIkskLXSja7J4ctMWqyKNQlFqTYqyVbUHAyJdO1Iq1mLQkFdlDUvqAKtQC04fjCaZQe+dv3A9r2/KCLKMSzBBbB47K3dMvg3/cj8epJKdcZAQNgo9t9sji8hv0+uN9UNfU9N+gA9rbVdvOPcajrxnc4RD+ac+Uwbil5JqGUfGD6Inzc8w7VqT7Cv4ByKyYKPUX5bYAAAAAElFTkSuQmCC"),
     #000000;
   background-size: cover;
   background-repeat: no-repeat;
@@ -76,6 +99,9 @@ ul {
 }
 .not-found .background {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACwSURBVBhXDczBMsRAEAbgnu5kZiXZsOvghiPFwXt5YVVuLlQpCpHJdHr+NN8DfOHx4d7JmVmrlYpsVdwdLnen/eK+wn7UsCE4EfzYRtnF9rvaZLZnuWxOhiCjNPg/Dq0k2i7adN2dJYoo4IoSKndMt+PuquuDhtdpfv6cK2gP549lAozI56Km6yHR05QzEt8M572MgaILHYc0sue1viu4rMShy+pfm78o3kCxSb+L/gFrlmTqHkDOkwAAAABJRU5ErkJggg==");
+}
+.minecraft .background {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGDUExURTFOJzVWKUFoMkt4OSxGIy9KHydHH0hzNzlcLXd1tzdRJDJRKDteLjNLI5A3Ot2MjHaFplQ3SyZDHi9gHTlXJT04JylJHzVRJICjtShAIzZQJIG/tj5jMDFeJi9GIjZaITRWIUMRES5ZI2YZGyhOGStLICk7HkJoMitUGzVWKtKoQTdBIaxHSic9IjRNIihIICpBITNRKD9jMLJDL2A5aC5JHmp4ViM7HCpTG0JoMzZ3XCpIICE2Gx8yGjteLyZGGD46OUhDQyMiJCUkJi4uLyknJignKUhEQzk4PUE9OzczOSkoLEFNMzJCZUJOM2V8OTNDZjNEaDRFaENcjzBAYjxRfRctGyBHJzA/XjJDXC4+Xy08WzRGay49XS9MVzFAYTZQX0BXhzpcbjdRYDlTYy8/XjNFaj5Xhy07WTVFWjVKZSw7Wis6VzVHbS08XFtuNGl+QFhjNTtGLzJKWjxVejtQfDA9Wy8+WjJJVy9JWyxFUyxDUzlDLVdqMmV6PlRfM1drMqCJmv8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAFBhaW50Lk5FVCA1LjEuN4vW9zkAAAC2ZVhJZklJKgAIAAAABQAaAQUAAQAAAEoAAAAbAQUAAQAAAFIAAAAoAQMAAQAAAAMAAAAxAQIAEAAAAFoAAABphwQAAQAAAGoAAAAAAAAAo5MAAOgDAACjkwAA6AMAAFBhaW50Lk5FVCA1LjEuNwADAACQBwAEAAAAMDIzMAGgAwABAAAAAQAAAAWgBAABAAAAlAAAAAAAAAACAAEAAgAEAAAAUjk4AAIABwAEAAAAMDEwMAAAAAA02IfdCSajZAAAAQFJREFUKFMNzfcjAnEYx/HP832OLn3VySpOnChnRPbKjstMtuw9Dtkz+dPdr+8fXm+ABIQQREIwMykoIkUUM1yqE90kGCWqR5YKr88nSSuTQsLvVssrKhWqElwdCNYQajVdBykUZCKWRA7orwsJXa9nduwGA8xoBHvcIelMBIdB3NQsEdEiIIkoG2gxubWtvSMQ65Qx7op3A5J7er19/QODJjjuisIcwnDYGBlNJMZMjKvAxOTU9ExyNjlnpVKWNW9hYXFpeSW9mllLr2cyG5tb2N7Zze7tHxweHZ+cnp1fXOLq+uY2a9v23f1D7jGXe8Lzy+vb+8fn1/dPPv9b+Cv8AwUAKZJIDHbmAAAAAElFTkSuQmCC");
 }
 
 .container {
