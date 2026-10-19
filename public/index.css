@@ -29,7 +29,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   min-height: 100svh;
-  font-family: "Source Serif 4", Charter, Cambria, Cochin, Georgia, Times,
+  font-family:
+    "Source Serif 4", Charter, Cambria, Cochin, Georgia, Times,
     "Times New Roman", serif;
   line-height: 1.2;
 }
@@ -83,7 +84,8 @@ ul {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVBhXBcHbasIwGADg5I+x0aZWWsV6YIwxhF3MbYJv4iP4EL6leONFL1Rwk7G1tGubNOlx34e3+x3CCCiTeSzyIkskLXSja7J4ctMWqyKNQlFqTYqyVbUHAyJdO1Iq1mLQkFdlDUvqAKtQC04fjCaZQe+dv3A9r2/KCLKMSzBBbB47K3dMvg3/cj8epJKdcZAQNgo9t9sji8hv0+uN9UNfU9N+gA9rbVdvOPcajrxnc4RD+ac+Uwbil5JqGUfGD6Inzc8w7VqT7Cv4ByKyYKPUX5bYAAAAAElFTkSuQmCC"),
+  background:
+    url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVBhXBcHbasIwGADg5I+x0aZWWsV6YIwxhF3MbYJv4iP4EL6leONFL1Rwk7G1tGubNOlx34e3+x3CCCiTeSzyIkskLXSja7J4ctMWqyKNQlFqTYqyVbUHAyJdO1Iq1mLQkFdlDUvqAKtQC04fjCaZQe+dv3A9r2/KCLKMSzBBbB47K3dMvg3/cj8epJKdcZAQNgo9t9sji8hv0+uN9UNfU9N+gA9rbVdvOPcajrxnc4RD+ac+Uwbil5JqGUfGD6Inzc8w7VqT7Cv4ByKyYKPUX5bYAAAAAElFTkSuQmCC"),
     #000000;
   background-size: cover;
   background-repeat: no-repeat;
@@ -201,6 +203,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  flex-grow: 1;
 }
 
 .rich-list-item-title {
